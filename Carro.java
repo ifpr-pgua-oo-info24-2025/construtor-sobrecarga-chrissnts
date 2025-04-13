@@ -77,20 +77,20 @@ public class Carro {
     @Override
     public String toString() {
 
-        if(this.getCondutor() != null){
-            return "Carro\n"
-                + "  Marca: " + marca + ",\n"
-                + "  Modelo: " + modelo + ",\n"
-                + "  Placa: " + placa + ",\n"
-                + "  Motor: " + this.motor.getTipo() + ",\n"
-                + "  Condutor: " + this.condutor.getNome()+ "\n"
+        if(this.condutor != null){
+            return "\nCarro >>>>"
+                + "  Marca: " + marca + ","
+                + "  Modelo: " + modelo + ","
+                + "  Placa: " + placa + ","
+                + "  Motor: " + this.motor.getTipo() + ","
+                + "  Condutor: " + this.condutor.getNome()+ ""
                 + "";
         }else{
-            return "Carro\n"
-                + "  Marca: " + marca + ",\n"
-                + "  Modelo: " + modelo + ",\n"
-                + "  Placa: " + placa + ",\n"
-                + "  Motor: " + this.motor.getTipo() + ",\n"
+            return "\nCarro >>>>"
+                + "  Marca: " + marca + ","
+                + "  Modelo: " + modelo + ","
+                + "  Placa: " + placa + ","
+                + "  Motor: " + this.motor.getTipo() + ","
                 + "";
         }
         
