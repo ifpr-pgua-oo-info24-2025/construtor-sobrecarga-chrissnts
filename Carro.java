@@ -1,16 +1,11 @@
-public class Carro{
+public class Carro {
+
     private String marca;
     private String modelo;
     private String placa;
     private Motor motor;
     private Condutor condutor;
-
-
-    public String trocarCondutor(Condutor condutor){
-        this.setCondutor(condutor);
-        return "Condutor trocado com sucesso";
-    }
-
+    
     public Carro(String marca, String modelo, String placa, Motor motor, Condutor condutor) {
         this.marca = marca;
         this.modelo = modelo;
@@ -19,6 +14,15 @@ public class Carro{
         this.condutor = condutor;
     }
 
+    public String trocarCondutor(Condutor condutor) {
+        this.setCondutor(condutor);
+        return "Condutor trocado com sucesso";
+    }
+
+    public String trocarMotor(Motor motor) {
+        this.setMotor(motor);
+        return "Motor trocado com sucesso";
+    }
 
     public Carro(String marca, String modelo, String placa, Motor motor) {
         this.marca = marca;
@@ -29,39 +33,67 @@ public class Carro{
 
     public Carro() {
     }
-    public String getmarca() {
+
+    public String getMarca() {
         return this.marca;
     }
-    public void setmarca(String marca) {
+
+    public void setMarca(String marca) {
         this.marca = marca;
     }
-    public String getmodelo() {
+
+    public String getModelo() {
         return this.modelo;
     }
-    public void setmodelo(String modelo) {
+
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    public String getplaca() {
+
+    public String getPlaca() {
         return this.placa;
     }
-    public void setplaca(String placa) {
+
+    public void setPlaca(String placa) {
         this.placa = placa;
     }
+
     public Motor getMotor() {
         return this.motor;
     }
+
     public void setMotor(Motor motor) {
         this.motor = motor;
     }
+
     public Condutor getCondutor() {
         return this.condutor;
     }
+
     public void setCondutor(Condutor condutor) {
         this.condutor = condutor;
     }
 
-    
+    @Override
+    public String toString() {
 
-    
+        if(this.getCondutor() != null){
+            return "Carro\n"
+                + "  Marca: " + marca + ",\n"
+                + "  Modelo: " + modelo + ",\n"
+                + "  Placa: " + placa + ",\n"
+                + "  Motor: " + this.motor.getTipo() + ",\n"
+                + "  Condutor: " + this.condutor.getNome()+ "\n"
+                + "";
+        }else{
+            return "Carro\n"
+                + "  Marca: " + marca + ",\n"
+                + "  Modelo: " + modelo + ",\n"
+                + "  Placa: " + placa + ",\n"
+                + "  Motor: " + this.motor.getTipo() + ",\n"
+                + "";
+        }
+        
+    }
 
 }
